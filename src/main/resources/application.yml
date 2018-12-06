@@ -1,0 +1,16 @@
+rosu:
+  datasource:
+#    name: rosu
+    url: jdbc:sqlserver://172.29.15.170;databaseName=ROSU3
+    username: rosu
+    password: 4R33XJj2Ym
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    initialize: false
+ake:
+  datasource:
+#    name: ake
+    url: jdbc:postgresql://172.29.14.161:5432/AKE
+    username: AKE
+    password: ake123
+    driver-class-name: org.postgresql.Driver
+    initialize: false
