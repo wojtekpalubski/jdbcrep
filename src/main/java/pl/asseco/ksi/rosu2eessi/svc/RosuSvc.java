@@ -7,13 +7,16 @@ import pl.asseco.ksi.rosu2eessi.data.Wniosek;
 import pl.asseco.ksi.rosu2eessi.data.WniosekRepository;
 
 @Service
-@RequiredArgsConstructor
 public class RosuSvc {
 
-    @Autowired
+//    @Autowired
     private final WniosekRepository wniosekRepository;
 
+    public RosuSvc(WniosekRepository wniosekRepository){
+        this.wniosekRepository=wniosekRepository;
+    }
+
     public Wniosek pobierzWniosek(Long id){
-        return wniosekRepository.findById(id);
+        return wniosekRepository.findById(id).orElseGet(null);
     }
 }

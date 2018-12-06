@@ -1,16 +1,18 @@
 package pl.asseco.ksi.rosu2eessi.data;
 
 import lombok.Data;
-import lombok.ToString;
-import org.springframework.data.annotation.Id;
+import javax.persistence.Id;
 
+import javax.persistence.Entity;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Data
+@Entity
+//@Table(name="Wniosek")
 public class Wniosek implements Serializable {
     @Id
-    private Long id;
+    private Long WniosekId;
     private Long RodzajWnioskuId;
     private LocalDateTime DataWplywu;
     private String TjoWplywu;

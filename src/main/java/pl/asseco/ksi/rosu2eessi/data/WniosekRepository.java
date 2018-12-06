@@ -1,10 +1,10 @@
 package pl.asseco.ksi.rosu2eessi.data;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.Repository;
-import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.Optional;
 
-public interface WniosekRepository extends Repository <Wniosek, Long>{
-    public Wniosek findById(Long Id);
+public interface WniosekRepository extends JpaRepository<Wniosek, Long> {
+    public Optional<Wniosek> findById(Long WniosekId);
 }
